@@ -11,7 +11,7 @@ const fileName = `database-backup-${currentDate}.sql`;
 
 
 async function backup() {
-    execute(`pg_dump -U ${username} -d ${database} -f ${fileName} -F t`,).then(async () => {
+    execute(`sudo -u ${username} pg_dump ${database} > ${fileName}`,).then(async () => {
         console.log("Finito");
         return 0;
     }).catch(err => {
@@ -19,7 +19,7 @@ async function backup() {
     })
 }
 
-const task = cron.schedule('59 23 * * FRI', function() {
+const task = cron.schedule('* * * * *', function() {
     backup().then(console.log('success backup db: ' + database));
   });
 
