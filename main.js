@@ -33,7 +33,7 @@ async function backup() {
     })
 }
 
-const task = cron.schedule('* * * * *', function() {
+const task = cron.schedule('59 23 * * FRI', function() {
     backup().then(console.log('success backup db: ' + database));
   });
 
