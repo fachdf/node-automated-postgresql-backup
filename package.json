@@ -1,0 +1,25 @@
+{
+  "name": "automated-postgresql-backup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "dependencies": {
+    "@getvim/execute": "^1.0.0",
+    "dotenv": "^16.0.3",
+    "node-cron": "^3.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fachdf/node-automated-postgresql-backup.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fachdf/node-automated-postgresql-backup/issues"
+  },
+  "homepage": "https://github.com/fachdf/node-automated-postgresql-backup#readme"
+}
