@@ -16,6 +16,12 @@ async function backup() {
         console.log("Done pg_dump");
         execute(`gdrive upload --parent ${parent_folder} ${fileName}`,).then(async () => {
             console.log("Done Upload to Google Drive");
+            execute(`rm ${fileName}`,).then(async () => {
+                console.log("Done Delete Local File");
+            }).catch(err => {
+                console.log("Error Delete Local File");
+                console.log(err);
+            })
         }).catch(err => {
             console.log("Error Upload to Google Drive");
             console.log(err);
