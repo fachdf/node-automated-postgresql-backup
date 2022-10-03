@@ -7,7 +7,7 @@ const database = process.env.DB_NAME;
 const parent_folder = process.env.PARENT_FOLDER
 const date = new Date();
 const currentDate = `${date.getFullYear()}.${date.getMonth() + 1}.${date.getDate()}.${date.getHours()}.${date.getMinutes()}`;
-const fileName = `database-backup-${currentDate}.sql`;
+const fileName = `${database}-backup-${currentDate}.sql`;
 
 
 
